@@ -1,0 +1,12 @@
+name: end-to-end-pipeline
+on: [push]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v4
+     - uses: actions/node-setup
+       with:
+        node-version: 16
+     - run: npm install
+     - run: npm test

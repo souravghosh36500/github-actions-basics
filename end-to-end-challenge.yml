@@ -1,0 +1,13 @@
+name: end-to-end-challenge
+on: push
+
+jobs:
+  ci:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/chekout@v4
+   - uses: actions/node-setup
+     with:
+        version: 16
+   - run: npm install
+   - run: npm test
