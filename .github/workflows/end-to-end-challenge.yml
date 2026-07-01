@@ -3,6 +3,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
@@ -10,3 +11,11 @@ jobs:
       - run: npm install
       - run: npm test
 
+=======
+     - uses: actions/checkout@v4
+     - uses: actions/node-setup@v3
+       with:
+        node-version: 16
+     - run: npm install
+     - run: npm test
+>>>>>>> 4a8b5c1 (create ci)
